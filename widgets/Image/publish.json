@@ -1,0 +1,12 @@
+{
+  "description": "Demo usage for image label",
+  "author": "everettjf",
+  "screenshots": ["screenshot1.png"],
+  "files": [
+    "image/image-leaf.png",
+    "image/image1.png",
+    "main.jsx",
+    "publish.json",
+    "screenshot/screenshot1.png"
+  ]
+}
