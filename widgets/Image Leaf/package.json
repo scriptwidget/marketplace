@@ -1,8 +1,8 @@
 {
   "description": "Display a leaf image",
   "author": "everettjf",
-  "screenshots": [
-    "screenshot/screenshot1.png"
+  "snapshots": [
+    "snapshots/snapshot1.png"
   ],
   "files": [
     "image/image-leaf.png",
