@@ -1,5 +1,5 @@
 {
-  "market_name": "ScriptWidget Marketplace",
+  "name": "ScriptWidget Marketplace",
   "maintainer": "everettjf",
   "widgets": [
     { "name": "Is Friday Today", "size": "small" },
