@@ -2,7 +2,7 @@
   "description": "Display a leaf image",
   "author": "everettjf",
   "snapshots": [
-    "snapshots/snapshot1.png"
+    "snapshot/snapshot1.png"
   ],
   "files": [
     "image/image-leaf.png",

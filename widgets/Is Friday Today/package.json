@@ -2,7 +2,7 @@
   "description": "Show is it friday today, so you can have a rest tomorrow :)",
   "author": "everettjf",
   "snapshots": [
-    "snapshots/snapshot1.png"
+    "snapshot/snapshot1.png"
   ],
   "files": [
     "main.jsx"
