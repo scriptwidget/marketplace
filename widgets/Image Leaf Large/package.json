@@ -1,0 +1,11 @@
+{
+  "description": "Display a leaf image",
+  "author": "everettjf",
+  "screenshots": [
+    "screenshot/screenshot1.png"
+  ],
+  "files": [
+    "image/image-leaf.png",
+    "main.jsx"
+  ]
+}

@@ -2,7 +2,18 @@
   "market_name": "ScriptWidget Marketplace",
   "maintainer": "everettjf",
   "widgets": [
-    { "name": "Is Friday Today", "size": ["small", "medium"] },
-    { "name": "Image Leaf", "size": ["small", "large"] }
+    { "name": "Is Friday Today", "size": "small" },
+    { "name": "Is Friday Today", "size": "small" },
+    { "name": "Is Friday Today", "size": "small" },
+    { "name": "Is Friday Today", "size": "small" },
+    { "name": "Image Leaf", "size": "medium" },
+    { "name": "Image Leaf", "size": "medium" },
+    { "name": "Image Leaf", "size": "medium" },
+    { "name": "Image Leaf", "size": "medium" },
+    { "name": "Image Leaf Large", "size": "large" },
+    { "name": "Image Leaf Large", "size": "large" },
+    { "name": "Image Leaf Large", "size": "large" },
+    { "name": "Image Leaf Large", "size": "large" },
+    { "name": "--ADD ITEM BEFORE THIS ITEM--", "size": "" }
   ]
 }
