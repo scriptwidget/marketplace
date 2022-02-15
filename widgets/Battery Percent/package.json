@@ -1,5 +1,5 @@
 {
-  "description": "Display a leaf image",
+  "description": "Display current battery percent",
   "author": "everettjf",
   "snapshots": [
     "snapshot/snapshot.png"

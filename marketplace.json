@@ -2,18 +2,73 @@
   "name": "ScriptWidget Marketplace",
   "maintainer": "everettjf",
   "widgets": [
-    { "name": "Is Friday Today", "size": "small" },
-    { "name": "Is Friday Today", "size": "small" },
-    { "name": "Is Friday Today", "size": "small" },
-    { "name": "Is Friday Today", "size": "small" },
-    { "name": "Image Leaf", "size": "medium" },
-    { "name": "Image Leaf", "size": "medium" },
-    { "name": "Image Leaf", "size": "medium" },
-    { "name": "Image Leaf", "size": "medium" },
-    { "name": "Image Leaf Large", "size": "large" },
-    { "name": "Image Leaf Large", "size": "large" },
-    { "name": "Image Leaf Large", "size": "large" },
-    { "name": "Image Leaf Large", "size": "large" },
-    { "name": "--ADD ITEM BEFORE THIS ITEM--", "size": "" }
+    {
+      "name": "Circle Animation",
+      "size": "large"
+    },
+    {
+      "name": "Today Week",
+      "size": "large"
+    },
+    {
+      "name": "Weather Display",
+      "size": "small"
+    },
+    {
+      "name": "Shape",
+      "size": "medium"
+    },
+    {
+      "name": "Is Working Day Today",
+      "size": "small"
+    },
+    {
+      "name": "Clock Point",
+      "size": "small"
+    },
+    {
+      "name": "Storage Ring",
+      "size": "large"
+    },
+    {
+      "name": "Image",
+      "size": "small"
+    },
+    {
+      "name": "Time",
+      "size": "large"
+    },
+    {
+      "name": "Lunar Date",
+      "size": "small"
+    },
+    {
+      "name": "Days Until End Of Month",
+      "size": "small"
+    },
+    {
+      "name": "Is Friday Today",
+      "size": "small"
+    },
+    {
+      "name": "Battery Percent",
+      "size": "medium"
+    },
+    {
+      "name": "Open Link",
+      "size": "medium"
+    },
+    {
+      "name": "Gauge Battery",
+      "size": "small"
+    },
+    {
+      "name": "Days Until End Of Year",
+      "size": "medium"
+    },
+    {
+      "name": "Clock",
+      "size": "small"
+    }
   ]
 }

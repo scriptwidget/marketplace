@@ -2,7 +2,6 @@
 // ScriptWidget 
 // https://scriptwidget.app
 // 
-// 
 
 var d = new Date();
 var n = d.getDay();
@@ -10,7 +9,7 @@ console.log(n);
 
 let linearGradient = {
   type: "linear",
-  colors: ["yellow", "white"],
+  colors: ["yellow", "red"],
   startPoint: "top",
   endPoint: "bottom",
 };
@@ -27,14 +26,16 @@ $render(
           {d.getFullYear()}-{d.getMonth() + 1}-{d.getDate()}
         </text>
         <text font="body" color="black">
-          Is Friday today ?
+          Is Working Day Today ?
         </text>
       </vstack>
       <spacer />
     </hstack>
     <spacer />
-    <text font="largeTitle" color="black" padding="10">
-      {n == 5 ? "Yes😊" : "No🤔"}
-    </text>
+    <hstack alignment="center">
+        <text font="largeTitle" color="black" padding="10">
+        {(n >= 1 && n <= 5) ? "Yes⛽️⛽️⛽️" : "No😄"}
+        </text>
+    </hstack>    
   </vstack>
 );

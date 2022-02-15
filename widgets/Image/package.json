@@ -5,6 +5,7 @@
     "snapshot/snapshot.png"
   ],
   "files": [
+    "image/image.png",
     "main.jsx"
   ]
 }
