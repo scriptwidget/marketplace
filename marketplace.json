@@ -3,7 +3,7 @@
   "maintainer": "everettjf",
   "widgets": [
     {
-      "name": "Circle Animation",
+      "name": "Image No Margin",
       "size": "large"
     },
     {
@@ -13,10 +13,6 @@
     {
       "name": "Weather",
       "size": "small"
-    },
-    {
-      "name": "Shape",
-      "size": "medium"
     },
     {
       "name": "Is Working Day Today",
@@ -69,6 +65,18 @@
     {
       "name": "Clock",
       "size": "small"
+    },
+    {
+      "name": "Shape",
+      "size": "medium"
+    },
+    {
+      "name": "Circle Animation",
+      "size": "large"
+    },
+    {
+      "name": "-----end of item-----",
+      "size": ""
     }
   ]
 }
