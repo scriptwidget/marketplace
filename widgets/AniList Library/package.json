@@ -1,10 +1,10 @@
 {
     "description": "Show a list of your latest anime/manga list updates on AniList. Supports all widget sizes but is best optimised for large size.\nRead the comments for setup details.",
-    "author": "Reina",
+    "author": "Reinachan",
     "snapshots": [
       "snapshot/snapshot.jpeg"
     ],
     "files": [
       "main.jsx"
     ]
-  }
+}
