@@ -3,6 +3,10 @@
   "maintainer": "everettjf",
   "widgets": [
     {
+      "name": "AniList Library",
+      "size": "large"
+    },
+    {
       "name": "Image No Margin",
       "size": "large"
     },
@@ -72,10 +76,6 @@
     },
     {
       "name": "Circle Animation",
-      "size": "large"
-    },
-    {
-      "name": "AniList Library",
       "size": "large"
     },
     {
