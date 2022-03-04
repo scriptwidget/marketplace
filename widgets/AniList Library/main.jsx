@@ -1,7 +1,7 @@
 // Add your username here
 const USERNAME = "Reina";
 
-// Set media type from widget paramter. Defaults to ANIME. Options are ANIME and MANGA.
+// Set the media type as a widget parameter (that way you can have both anime and manga widgets). Defaults to ANIME. Options are ANIME and MANGA.
 const PARAMS = $getenv("widget-param");
 const MEDIA = PARAMS?.toUpperCase() || "ANIME";
 
