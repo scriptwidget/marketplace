@@ -1,7 +1,7 @@
 // Add your username here
 const USERNAME = "Reina";
 
-// Set media type from widget settings. Defaults to ANIME
+// Set media type from widget paramter. Defaults to ANIME. Options are ANIME and MANGA.
 const PARAMS = $getenv("widget-param");
 const MEDIA = PARAMS?.toUpperCase() || "ANIME";
 
@@ -25,10 +25,11 @@ const isSmall = wsize === "small";
 const isMedium = wsize === "medium";
 const isLarge = wsize === "large";
 
-// Text Sizes
-const descSize = 11;
-const headerSize = 16;
+// Fonts
+const titleFont = isSmall ? "11,bold" : "15,bold";
+const detailsFont = "10";
 
+// Sets the amount of items to display in the widget
 const mediaMap = () => {
   if (isSmall) return [0, 1];
   if (isMedium) return [0, 1, 2];
@@ -72,7 +73,7 @@ const colourPicker = (colour) => {
     grey: "6B7A91",
   };
 
-  return `#${colourMap[colour]}`;
+  return `#${colourMap[colour ?? "pink"]}`;
 };
 
 const query = `
@@ -128,10 +129,8 @@ const res = await $http.post("https://graphql.anilist.co", {
 const data = await JSON.parse(res);
 
 const colour = colourPicker(
-  data.data.Page.mediaList[0].user.options.profileColor
+  data?.data?.Page?.mediaList[0]?.user?.options?.profileColor ?? "pink"
 );
-
-//console.log(JSON.stringify(data.data.Page.mediaList[0], null, 2))
 
 const LeftAlign = ({ props: { frame }, children }) => {
   return (
@@ -143,8 +142,6 @@ const LeftAlign = ({ props: { frame }, children }) => {
 };
 
 const Media = ({ props: { mediaItem } }) => {
-  console.log(JSON.stringify(mediaItem, null, 2));
-
   const { media, progress, user } = mediaItem;
   const { episodes, chapters, title, nextAiringEpisode, coverImage, status } =
     media;
@@ -182,7 +179,7 @@ const Poster = ({ props: { img } }) => {
 const Title = ({ props: { title } }) => {
   const parsedTitle = title?.english ?? title?.romaji;
 
-  const font = isSmall ? "11,bold" : "14,bold";
+  const font = titleFont;
 
   return (
     <LeftAlign>
@@ -194,7 +191,7 @@ const Title = ({ props: { title } }) => {
 const ProgressText = ({
   props: { progress, total, nextEpisode, nextEpisodeDate, type },
 }) => {
-  const font = "10";
+  const font = detailsFont;
 
   return (
     <hstack padding="3,0,3,0">
