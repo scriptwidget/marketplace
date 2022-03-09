@@ -132,7 +132,7 @@ const colour = colourPicker(
   data?.data?.Page?.mediaList[0]?.user?.options?.profileColor ?? "pink"
 );
 
-const LeftAlign = ({ props: { frame }, children }) => {
+const LeftAlign = ({ frame , children }) => {
   return (
     <hstack spacing="0" padding="0" frame={frame}>
       {children}
@@ -141,7 +141,7 @@ const LeftAlign = ({ props: { frame }, children }) => {
   );
 };
 
-const Media = ({ props: { mediaItem } }) => {
+const Media = ({ mediaItem }) => {
   const { media, progress, user } = mediaItem;
   const { episodes, chapters, title, nextAiringEpisode, coverImage, status } =
     media;
@@ -172,11 +172,11 @@ const Media = ({ props: { mediaItem } }) => {
   );
 };
 
-const Poster = ({ props: { img } }) => {
+const Poster = ({ img }) => {
   return <image frame="30,50" mode="fill" clip url={img} corner="2" />;
 };
 
-const Title = ({ props: { title } }) => {
+const Title = ({ title }) => {
   const parsedTitle = title?.english ?? title?.romaji;
 
   const font = titleFont;
@@ -188,9 +188,7 @@ const Title = ({ props: { title } }) => {
   );
 };
 
-const ProgressText = ({
-  props: { progress, total, nextEpisode, nextEpisodeDate, type },
-}) => {
+const ProgressText = ({ progress, total, nextEpisode, nextEpisodeDate, type }) => {
   const font = detailsFont;
 
   return (
@@ -213,7 +211,7 @@ const progress = (fullWidth, currentWidth, max) => {
   return Math.round((fullWidth * currentWidth) / max);
 };
 
-const Progress = ({ props: { current, max, secondary, w, h } }) => {
+const Progress = ({ current, max, secondary, w, h }) => {
   const width = w ?? isSmall ? 90 : 265;
   const height = h ?? 6;
   const firstBarHeight = secondary ? height - 2 : height;
@@ -238,9 +236,7 @@ const Progress = ({ props: { current, max, secondary, w, h } }) => {
   );
 };
 
-const ProgressBar = ({
-  props: { current, max, width, height, color = colour },
-}) => {
+const ProgressBar = ({current, max, width, height, color = colour }) => {
   return (
     <hstack>
       <rect
