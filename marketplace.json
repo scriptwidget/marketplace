@@ -79,6 +79,10 @@
       "size": "large"
     },
     {
+      "name": "New Episode Tracker",
+      "size": "medium"
+    },
+    {
       "name": "-----end of item-----",
       "size": ""
     }
