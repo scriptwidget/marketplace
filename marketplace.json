@@ -7,6 +7,10 @@
       "size": "large"
     },
     {
+      "name": "New Episode Tracker",
+      "size": "medium"
+    },
+    {
       "name": "Image No Margin",
       "size": "large"
     },
@@ -77,10 +81,6 @@
     {
       "name": "Circle Animation",
       "size": "large"
-    },
-    {
-      "name": "New Episode Tracker",
-      "size": "medium"
     },
     {
       "name": "-----end of item-----",
