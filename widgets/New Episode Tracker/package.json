@@ -1,0 +1,10 @@
+{
+    "description": "Add your own on-going series accessible through given API, and be aware of new episodes",
+    "author": "djarabaj",
+    "snapshots": [
+        "snapshot/snapshot.png"
+    ],
+    "files": [
+        "main.jsx"
+    ]
+}
