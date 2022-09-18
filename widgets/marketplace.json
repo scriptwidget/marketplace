@@ -1,0 +1,94 @@
+{
+  "name": "ScriptWidget Marketplace",
+  "maintainer": "everettjf",
+  "widgets": [
+    {
+      "name": "AniList Library",
+      "size": "large"
+    },
+    {
+      "name": "New Episode Tracker",
+      "size": "medium"
+    },
+    {
+      "name": "Image No Margin",
+      "size": "large"
+    },
+    {
+      "name": "Today Week",
+      "size": "large"
+    },
+    {
+      "name": "Weather",
+      "size": "small"
+    },
+    {
+      "name": "Is Working Day Today",
+      "size": "small"
+    },
+    {
+      "name": "Clock Point",
+      "size": "small"
+    },
+    {
+      "name": "Storage Ring",
+      "size": "large"
+    },
+    {
+      "name": "Image",
+      "size": "small"
+    },
+    {
+      "name": "Time",
+      "size": "large"
+    },
+    {
+      "name": "Lunar Date",
+      "size": "small"
+    },
+    {
+      "name": "Days Until End Of Month",
+      "size": "small"
+    },
+    {
+      "name": "Is Friday Today",
+      "size": "small"
+    },
+    {
+      "name": "Battery Percent",
+      "size": "medium"
+    },
+    {
+      "name": "Open Link",
+      "size": "medium"
+    },
+    {
+      "name": "Gauge Battery",
+      "size": "small"
+    },
+    {
+      "name": "Days Until End Of Year",
+      "size": "medium"
+    },
+    {
+      "name": "Clock",
+      "size": "small"
+    },
+    {
+      "name": "Shape",
+      "size": "medium"
+    },
+    {
+      "name": "Circle Animation",
+      "size": "large"
+    },
+    {
+      "name": "Countdown",
+      "size": "small"
+    },
+    {
+      "name": "-----end of item-----",
+      "size": ""
+    }
+  ]
+}
