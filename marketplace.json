@@ -11,6 +11,10 @@
       "size": "medium"
     },
     {
+      "name": "Countdown",
+      "size": "small"
+    },
+    {
       "name": "Image No Margin",
       "size": "large"
     },
@@ -77,14 +81,6 @@
     {
       "name": "Shape",
       "size": "medium"
-    },
-    {
-      "name": "Circle Animation",
-      "size": "large"
-    },
-    {
-      "name": "Countdown",
-      "size": "small"
     },
     {
       "name": "-----end of item-----",
