@@ -4,23 +4,57 @@ const DEBUG = false
 
 const colors = {
   primary: "#080808",
+  primaryAlt: "#252b24",
   secondary: "#355e3b",
+  black: "black",
   text: {
-    primary: "white",
-    secondary: "#B6B6B4"
+    primary: "#d8e3d8",
+    secondary: "#7d7d7d"
   }
 }
 
+const canvasGradient = {
+  type: "linear",
+  colors: [
+    colors.primary,
+    colors.primaryAlt,
+    colors.primary
+  ],
+  startPoint: "topLeading",
+  endPoint: "bottomTrailing"
+}
+
 const currentDate = !DEBUG ? Date.now() :
-  new Date("2022-09-12T10:20:30Z")
+  new Date("2022-09-16T10:20:30Z")
 
 const serieName = !DEBUG ? $getenv("widget-param") :
-  "the-lord-of-the-rings"
+  "house-of-the-dragon"
+
+
+const getDefaultSeriesData = () => {
+  return {
+    tvShow: {
+      name: "Failed to fetch",
+      image_path: null
+    }
+  }
+}
+
+const isDefaultSeriesData = (serie) => {
+  return JSON.stringify(serie) 
+    == JSON.stringify(getDefaultSeriesData())
+}
 
 const fetchSerie = async s => {
-  const r = await fetch(API_URL + s)
-  DEBUG && console.log(r)
-  return JSON.parse(r)
+  let response = JSON.stringify(getDefaultSeriesData())
+  try {
+    response = await fetch(API_URL + s)
+  } catch (error) {
+    console.log("Failed to fetch series data: " + error)
+  }
+  
+  DEBUG && console.log(response)
+  return JSON.parse(response)
 }
 
 const formatDate = date => {
@@ -68,18 +102,49 @@ const getEpisodeData = function(info, id) {
     episodes[id]
 }
 
+const getCountdown = info => {
+
+    const episodeCount = info.episodes.length
+    const lastEpisode = getEpisodeData(info, -1)
+
+    if (formatDate(lastEpisode.air_date) < currentDate) {
+      return null
+    }
+
+    for (let i = 0; i <episodeCount; i++) {
+      let episodeData = info.episodes[i]
+
+      if (formatDate(episodeData.air_date) > currentDate) {
+        episodeData.id = i
+        return episodeData
+      }
+    }
+
+    return null
+  }
+
 const Logo = ({logoPath}) => {
    return (
     <zstack
       padding="40,0,40,30"
+      alignment="center"
       frame="80,80,trailing"
     >
-      <image 
-        url={logoPath} 
-        frame="90,120,trailing" 
-      />
+      {
+        logoPath != null ?
+
+        <image 
+          url={logoPath} 
+          alignment="center"
+          frame="90,120,trailing" 
+        />
+
+        :
+
+        null
+      }
       <rect
-         color={colors.secondary}
+         color={colors.black}
          stroke="1.5"
          frame="95,125"
        />
@@ -147,36 +212,29 @@ const TimeRemaining = ({info, countdown}) => {
   )
 }
 
-const Entry = ({info}) => {
+const Entry = ({info, countdown}) => {
 
-  const getCountdown = info => {
+  let status
 
-    const episodeCount = info.episodes.length
-    const lastEpisode = getEpisodeData(info, -1)
-
-    if (formatDate(lastEpisode.air_date) < currentDate) {
-      return null
-    }
-
-    for (let i = 0; i <episodeCount; i++) {
-      let episodeData = info.episodes[i]
-
-      if (formatDate(episodeData.air_date) > currentDate) {
-        episodeData.id = i
-        return episodeData
-      }
-    }
-
-    return null
+  if (countdown == null &&
+      info.name == getDefaultSeriesData().tvShow.name) {
+    status = "connection"
+  } else if (countdown == null) {
+    status = "next season"
+  } else {
+    status = `s${countdown.season}e${countdown.episode}`
   }
 
-  const countdown = getCountdown(info)
-
   return (
-    <zstack padding="10">
+    <zstack 
+      padding="5"
+      corner="15"
+      color={$gradient(canvasGradient)}
+    >
       <hstack 
         frame="max" 
-        background={colors.primary}
+
+        background={$gradient(canvasGradient)}
       >
         <Logo
           logoPath={info.image_path} 
@@ -224,11 +282,7 @@ const Entry = ({info}) => {
                   font="caption"
                   color={colors.text.primary}
                 >
-                  {
-                    countdown == null ? 
-                    "next season" : 
-                    `s${countdown.season}e${countdown.episode}`
-                  }
+                  {status}
                 </text>
               </hstack>
               <TimeRemaining
@@ -245,9 +299,12 @@ const Entry = ({info}) => {
 }
 
 const serie = await fetchSerie(serieName)
+const countdown = isDefaultSeriesData(serie) ?
+        null : getCountdown(serie.tvShow)
 
 $render(
-  <Entry
-    info={serie.tvShow}
-  />
+    <Entry
+      info={serie.tvShow}
+      countdown={countdown}
+    />
 );
