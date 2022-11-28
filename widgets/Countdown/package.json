@@ -1,0 +1,10 @@
+{
+  "description": "Countdown to/from a date(-time) in incremental detail",
+  "author": "Jan Jacobs",
+  "snapshots": [
+    "snapshot/snapshot.png"
+  ],
+  "files": [
+    "main.jsx"
+  ]
+}

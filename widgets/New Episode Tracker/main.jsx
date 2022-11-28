@@ -78,7 +78,7 @@ const Logo = ({logoPath}) => {
 const Entry = ({info}) => {
 
   const getNextEpisode = countdown => 
-    s${countdown.season}e${countdown.episode}
+    `s${countdown.season}e${countdown.episode}`
 
   const nextEpisodeRemaining = countdown => {
     const airDate = countdown.air_date
