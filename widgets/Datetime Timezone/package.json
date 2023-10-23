@@ -1,0 +1,10 @@
+{
+  "description": "Display datetime of 3 timezones",
+  "author": "everettjf",
+  "snapshots": [
+    "snapshot/snapshot.png"
+  ],
+  "files": [
+    "main.jsx"
+  ]
+}

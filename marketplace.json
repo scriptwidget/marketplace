@@ -3,6 +3,10 @@
   "maintainer": "everettjf",
   "widgets": [
     {
+      "name": "Datetime Timezone",
+      "size": "medium"
+    },
+    {
       "name": "AniList Library",
       "size": "large"
     },
