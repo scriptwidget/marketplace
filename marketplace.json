@@ -1,94 +1,94 @@
 {
-  "name": "ScriptWidget Marketplace",
-  "maintainer": "everettjf",
-  "widgets": [
-    {
-      "name": "Datetime Timezone",
-      "size": "medium"
-    },
-    {
-      "name": "AniList Library",
-      "size": "large"
-    },
-    {
-      "name": "New Episode Tracker",
-      "size": "medium"
-    },
-    {
-      "name": "Countdown",
-      "size": "small"
-    },
-    {
-      "name": "Image No Margin",
-      "size": "large"
-    },
-    {
-      "name": "Today Week",
-      "size": "large"
-    },
-    {
-      "name": "Weather",
-      "size": "small"
-    },
-    {
-      "name": "Is Working Day Today",
-      "size": "small"
-    },
-    {
-      "name": "Clock Point",
-      "size": "small"
-    },
-    {
-      "name": "Storage Ring",
-      "size": "large"
-    },
-    {
-      "name": "Image",
-      "size": "small"
-    },
-    {
-      "name": "Time",
-      "size": "large"
-    },
-    {
-      "name": "Lunar Date",
-      "size": "small"
-    },
-    {
-      "name": "Days Until End Of Month",
-      "size": "small"
-    },
-    {
-      "name": "Is Friday Today",
-      "size": "small"
-    },
-    {
-      "name": "Battery Percent",
-      "size": "medium"
-    },
-    {
-      "name": "Open Link",
-      "size": "medium"
-    },
-    {
-      "name": "Gauge Battery",
-      "size": "small"
-    },
-    {
-      "name": "Days Until End Of Year",
-      "size": "medium"
-    },
-    {
-      "name": "Clock",
-      "size": "small"
-    },
-    {
-      "name": "Shape",
-      "size": "medium"
-    },
-    {
-      "name": "-----end of item-----",
-      "size": ""
-    }
-  ]
+    "name": "ScriptWidget Marketplace",
+    "maintainer": "everettjf",
+    "widgets": [
+        {
+            "name": "Circle Animation",
+            "size": "small"
+        },
+        {
+            "name": "Today Week",
+            "size": "large"
+        },
+        {
+            "name": "Shape",
+            "size": "medium"
+        },
+        {
+            "name": "New Episode Tracker",
+            "size": "medium"
+        },
+        {
+            "name": "Is Working Day Today",
+            "size": "small"
+        },
+        {
+            "name": "Countdown",
+            "size": "small"
+        },
+        {
+            "name": "Clock Point",
+            "size": "small"
+        },
+        {
+            "name": "Datetime Timezone",
+            "size": "medium"
+        },
+        {
+            "name": "Storage Ring",
+            "size": "large"
+        },
+        {
+            "name": "Image",
+            "size": "small"
+        },
+        {
+            "name": "Time",
+            "size": "large"
+        },
+        {
+            "name": "Lunar Date",
+            "size": "small"
+        },
+        {
+            "name": "Days Until End Of Month",
+            "size": "small"
+        },
+        {
+            "name": "Is Friday Today",
+            "size": "small"
+        },
+        {
+            "name": "Weather",
+            "size": "small"
+        },
+        {
+            "name": "Battery Percent",
+            "size": "medium"
+        },
+        {
+            "name": "Image No Margin",
+            "size": "large"
+        },
+        {
+            "name": "AniList Library",
+            "size": "large"
+        },
+        {
+            "name": "Open Link",
+            "size": "medium"
+        },
+        {
+            "name": "Gauge Battery",
+            "size": "small"
+        },
+        {
+            "name": "Days Until End Of Year",
+            "size": "medium"
+        },
+        {
+            "name": "Clock",
+            "size": "small"
+        }
+    ]
 }
